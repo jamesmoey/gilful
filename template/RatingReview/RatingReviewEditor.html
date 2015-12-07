@@ -1,0 +1,14 @@
+<form name="ratingForm" ng-submit="save()">
+    <label for="name">Name</label>
+    <input type="text" ng-required="true" ng-model="submission.name" id="name" ng-model-options="{ getterSetter: true }">
+    <label for="email">Email Address</label>
+    <input type="text" ng-required="true" ng-model="submission.email" id="email" ng-model-options="{ getterSetter: true }">
+    <label for="rating">Your Rating</label>
+    <select id="rating" ng-model="submission.rating" ng-options="r.value as r.label for r in validRatings" ng-required="true"  ng-model-options="{ getterSetter: true }">
+    </select>
+    <label for="review">Review</label>
+    <textarea ng-model="submission.review" id="review" ng-model-options="{ getterSetter: true }">
+    </textarea>
+    <input type="submit" ng-hide="submission.id" ng-disabled="!ratingForm.$valid" value="Submit Review & Rating" />
+    <input type="submit" ng-show="submission.id" ng-disabled="!ratingForm.$valid" value="Add New Review & Rating" />
+</form>

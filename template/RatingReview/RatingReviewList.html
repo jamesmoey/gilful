@@ -1,0 +1,7 @@
+<ul>
+    <li ng-repeat="submission in list">
+        Rating and Review By {{submission.name}} <{{submission.email}}>, gave rating of {{submission.rating}}.
+        <p ng-if="submission.review">{{submission.review}}</p>
+        <button ng-click="edit(submission)">Edit</button>
+    </li>
+</ul>

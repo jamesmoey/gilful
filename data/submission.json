@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name":"James", "email":"jamesmoey@gmail.com","rating":3},
+  {"id": 2, "name":"Jimmy", "email":"jimmy@gmail.com","rating":2, "review": "I don't like the color"},
+  {"id": 3, "name":"John", "email":"john@gmail.com","rating":5}
+]

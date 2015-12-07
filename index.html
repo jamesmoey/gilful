@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating and Review Demo</title>
+    <script src="//code.angularjs.org/1.4.8/angular.min.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="/src/RatingReview/RatingReviewModel.js"></script>
+    <script src="/src/RatingReview/RatingReviewManagerService.js"></script>
+    <script src="/src/RatingReview/RatingReviewController.js"></script>
+    <script src="/src/RatingReview/RatingReviewEditorDirective.js"></script>
+    <script src="/src/RatingReview/RatingReviewListDirective.js"></script>
+</head>
+<body ng-controller="ReviewRatingController as rr">
+    <rating-review-editor on-submit="rr.save(submission)" edit-review-rating="rr.editSubmission"></rating-review-editor>
+    <rating-review-list list="rr.submissionList"></rating-review-list>
+</body>
+</html>
